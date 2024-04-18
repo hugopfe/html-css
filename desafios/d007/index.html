@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Flexível</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Imagem Flexível</h1>
+    <p>Está vendo a imagem abaixo? Pois bem, tente <strong>aumentar</strong> ou <strong>diminuir</strong> o tamanho da janela do seu navegador ou até mesmo abrir esta página em <strong>dispositivos diferentes</strong>.</p>
+    <picture>
+        <source media="(max-width: 760px)" srcset="images/paisagem-p.png" type="image/png">
+        <source media="(max-width: 1220px)" srcset="images/paisagem-m.png" type="image/png">
+        <img src="images/paisagem-g.png" alt="Foto de uma linda paisagem e uma mulher de braços abertos.">
+    </picture>
+</body>
+</html>

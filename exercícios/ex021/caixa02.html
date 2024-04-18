@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(9, 88, 42);
+            margin: 0px;
+        }
+
+        header {
+            background-color: rgb(255, 196, 0);
+            color: white;
+
+            padding: 5px;
+            margin: 10px;
+
+            border-radius: 10px;
+        }
+
+        header > h1 {
+            margin: 10px;
+            text-align: center;
+            text-shadow: 1px 1px 5px #00000078;
+        }
+
+        header > nav {
+            background-color: rgb(248, 226, 153);
+            margin: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 1px 2px 5px 1px #00000030;
+        }
+        
+        header > nav > a {
+            color:  black;
+            text-decoration: none;
+            margin-right: 30px;
+        }
+        
+        header > nav > a:hover {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 900px;
+        }
+
+        aside {
+            background-color: #00000078;
+            padding: 15px;
+            width: 80%;
+            margin: auto;
+            text-align: left;
+            border-radius: 1px 15px;
+            box-shadow: 2px 2px 5px 1px #00000050;
+        }
+
+        aside > iframe {
+            margin: 0px 80px;
+        }
+
+        #backtotop {
+            text-align: center;
+        }
+
+        #backtotop > a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #backtotop > a:hover {
+            color:rgb(20, 192, 91);
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>Minha Canaã Digital</h1>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Conteúdos</a>
+            <a href="#">Sobre nós</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Como aplicar o princípio da semeadura</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi repellendus ad ullam, quibusdam laudantium cumque! Mollitia quos consequatur, commodi consectetur eius suscipit quo vitae quaerat minus facilis architecto, inventore at. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores non ut eius corrupti consequuntur ullam iste facilis recusandae enim repellat reiciendis vitae iusto laudantium rerum repellendus voluptate, nisi, corporis animi.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, praesentium tempora fuga, repellat quidem nemo atque quos itaque facere magnam molestiae rem hic asperiores, aperiam sed consequuntur dolor id nam.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed veniam necessitatibus odit accusantium reprehenderit, repudiandae consectetur corrupti vitae nam officia dolorem laborum voluptatibus vero, consequatur quae in sunt, dolores cupiditate.</p>
+                <aside>
+                    <h3>Entenda melhor sobre esse princípio</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-Nr6Vt_fPSs?si=yWSPf_cDL5WHG07B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </aside>
+
+            </article>
+        </section>
+    </main>
+    <!-- <main>
+        <nav>
+            <a href="#">Descubra como fazer de R$3.000 a R$5.000 por mês pela internet</a>
+            <a href="#">Por que devo dar o dízimo?</a>
+            <a href="#">O que é Marketing Digital?</a>
+            <a href="#">Fim do Pix: Como a fala do presidente afeta a forma de pagamento?</a>
+        </nav>
+    </main> -->
+    <p id="backtotop"><a href="#header">Voltar ao topo</a></p>
+    <footer>
+        <p>Criado por Hugo Fernandes</p>
+    </footer>
+</body>
+</html>

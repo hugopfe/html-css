@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML 5</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Tente abrir este site em vários dispositivos diferentes ou aumente e diminua o tamanho da janela.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="images/image-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="images/image-m.png" type="image/png">
+        <img src="images/image-g.png" alt="Imagem dinâmica">
+    </picture>
+    <h1>Reproduzindo áudio</h1>
+    <p>Vamos aprender a inserir um áudio no seu site.</p>
+    <h2>Onde o Fogo Não Apaga - Fernanda Brum</h2>
+    <audio preload="metadata" controls>
+        <source src="midia/onde-o-fogo-não-apaga.mp3" type="audio/mpeg">
+        <source src="midia/onde-o-fogo-não-apaga.ogg" type="audio/ogg">
+        <p>Seu navegador não suporta áudio. <a href="midia/onde-o-fogo-não-apaga.mp3" download="onde-o-fogo-não-apaga.mp3" type="audio/mpeg"</p>
+    </audio>
+</body>
+</html>
