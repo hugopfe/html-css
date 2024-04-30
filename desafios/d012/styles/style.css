@@ -12,12 +12,12 @@ header {
     background-color: black;
     text-align: center;
     color: white;
-    min-height: 200px;
+    height: 15vw;
+    padding: 40px;
 }
 
 header > h1 {
     font: normal 10vw 'Passion One', cursive;
-    padding-top: 40px;
 }
 
 header > author {
@@ -34,32 +34,23 @@ a:hover {
     text-decoration: underline;
 }
 
-main {
-    padding-left: 40px;
-}
-
 main p {
-    font: normal 1.5em 'sriracha', cursive;
-    height: 400px;
-    padding-top: 50px;
-    /* padding-bottom: 50px; */
+    font: normal 4vw 'sriracha', cursive;
+    height: 50vw;
+    margin: 60px;
 }
 
 main > div.background {
-    margin-left: -40px;
-    box-shadow: inset 3px 3px 6px #00000047;
-    height: 400px;
+    box-shadow: inset 5px 3px 6px #00000047;
     position: relative;
 }
 
 main > div.background > p {
     background-color: rgba(0, 0, 0, 0.418);
     
-    position: absolute;
-    top: 50px;
-    
     display: inline-block;
-    height: auto;
+    min-height: 0px;
+    height: fit-content;
 
     margin-left: 40px;
     padding: 10px 20px;
