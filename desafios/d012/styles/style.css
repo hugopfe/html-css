@@ -37,22 +37,18 @@ a:hover {
 main p {
     font: normal 4vw 'sriracha', cursive;
     height: 50vw;
-    margin: 60px;
+    margin: 40px;
 }
 
 main > div.background {
     box-shadow: inset 5px 3px 6px #00000047;
-    position: relative;
 }
 
 main > div.background > p {
     background-color: rgba(0, 0, 0, 0.418);
     
     display: inline-block;
-    min-height: 0px;
-    height: fit-content;
 
-    margin-left: 40px;
     padding: 10px 20px;
 
     color: white;
