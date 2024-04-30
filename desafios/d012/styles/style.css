@@ -17,7 +17,7 @@ header {
 }
 
 header > h1 {
-    font: normal 10vw 'Passion One', cursive;
+    font: normal small-caps 10vw 'Passion One', cursive;
 }
 
 header > author {
@@ -34,17 +34,17 @@ a:hover {
     text-decoration: underline;
 }
 
-main p {
+main > section > p {
     font: normal 4vw 'sriracha', cursive;
-    height: 50vw;
-    margin: 40px;
+    margin: 50px;
+    line-height: 2em;
 }
 
-main > div.background {
+main > section.background {
     box-shadow: inset 5px 3px 6px #00000047;
 }
 
-main > div.background > p {
+main > section.background > p {
     background-color: rgba(0, 0, 0, 0.418);
     
     display: inline-block;
@@ -55,12 +55,12 @@ main > div.background > p {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.404);
 }
 
-div#flower {
+section#flower {
     background: white url('../images/background001.jpg') no-repeat fixed center;
     background-size: cover;
 }
 
-div#letters {
+section#letters {
     background: url('../images/background002.jpg') no-repeat fixed center;
     background-size: cover;
 }
