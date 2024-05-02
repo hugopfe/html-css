@@ -56,7 +56,7 @@ main > section.background > p {
 }
 
 section#flower {
-    background: white url('../images/background001.jpg') no-repeat fixed center;
+    background: url('../images/background001.jpg') no-repeat fixed center right;
     background-size: cover;
 }
 
