@@ -11,7 +11,10 @@
             border-collapse: collapse;
         }
 
-        
+        caption {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
 
         td, th {
             padding: 5px;
@@ -21,16 +24,17 @@
 </head>
 <body>
     <table>
+        <caption>Livros-Temas de Louvores</caption>
         <thead>
             <tr>
-                <th>Grupo</th>
-                <th>Nome</th>
-                <th colspan="3">Livros</th>
+                <th scope="col">Grupo</th>
+                <th scope="col">Nome</th>
+                <th scope="col" colspan="3">Livros</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th rowspan="3">Mulheres</th>
+                <th scope="row" rowspan="3">Mulheres</th>
                 <td>Larissa Pires</td>
                 <td>2 Reis</td>
                 <td>Isaías</td>
@@ -49,7 +53,7 @@
                 <td>Apocalipse</td>
             </tr>
             <tr>
-                <th rowspan="3">Homens</th>
+                <th scope="row" rowspan="3">Homens</th>
                 <td>Gabriel Guedes</td>
                 <td>Salmos</td>
                 <td>Isaías</td>
