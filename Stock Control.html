@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width initial-scale=1.0">
+		<title>Controle de Estoque</title>
+		<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			section#wrapper {
+				display: flex;
+				justify-content: space-around;
+				align-items: flex-start;
+			}
+
+			/* FORM */
+
+			form {
+				/* display: inline-block; */
+				background-color: rgb(105, 131, 153);
+				border: 1px solid black;
+				padding: 15px;
+				/* display: flex;
+				flex-direction: column;
+				align-items: baseline; */
+			}
+
+			form input[type="text"], input[type="number"] {
+				margin-bottom: 10px;
+			}
+
+			form label {
+				font-weight: bold;
+				color: white;
+			}
+			
+			/* TABLE */
+			
+			table {
+				/* display: inline-block; */
+				width: 800px;
+				border-collapse: collapse;
+			}
+
+			caption {
+				font: bold 1.5em Arial;
+				text-align: center;
+			}
+
+			caption, th, td {
+				padding: 5px;
+				border: 1px solid black;
+			}
+
+			th {
+				color: white;
+				background-color: grey;
+			}
+
+			td.fnum {
+				text-align: right;
+			}
+
+			col.total {
+				background-color: lightgray;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<section id="wrapper">
+			<table>
+				<caption>Controle de Estoque</caption>
+				<colgroup>
+					<col span="4" class="data">
+					<col span="1" class="total">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">Un. p/ Peça</th>
+						<th scope="col">Produto</th>
+						<th scope="col">Peças p/ Caixa</th>
+						<th scope="col">Total Caixas</th>
+						<th scope="col">Total Unidades</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="fnum">3</td>
+						<td>Cabides de madeira</td>
+						<td class="fnum">40</td>
+						<td class="fnum">219</td>
+						<td class="fnum">26.280</td>
+					</tr>
+				</tbody>
+				<tfoot></tfoot>
+			</table>
+			<form>
+				<label for="inptunity">Unidades p/ Peça</label><br>
+				<input type="number" name="inptunity" id="inptunity"><br>
+				<label for="inptproductname">Produto</label><br>
+				<input type="text" name="inptproductname" id="inptproductname"><br>
+				<label for="inptpieces">Peças p/ Caixa</label><br>
+				<input type="number" name="inptpieces" id="inpttotalpieces"><br>
+				<label for="inptboxes">Total Caixas</label><br>
+				<input type="number" name="inptboxes" id="inpttotalboxes"><br>
+				<input type="button" value="Registrar Produto" onclick="registerProduct()">
+			</form>
+		</section>
+
+		<!-- JAVASCRIPT -->
+		
+		<script>
+			const tbody = document.querySelector('tbody')
+			const tfoot = document.querySelector('tfoot')
+			const inptunity = document.querySelector('input#inptunity')
+			const inptproductname = document.querySelector('input#inptproductname')
+			const inpttotalpieces = document.querySelector('input#inpttotalpieces')
+			const inpttotalboxes = document.querySelector('input#inpttotalboxes')
+			
+			function registerProduct() {
+				let unity = Number(inptunity.value)
+				let product = inptproductname.value
+				let totalpieces = Number(inpttotalpieces.value)
+				let totalboxes = Number(inpttotalboxes.value)
+				
+				let totalunity = totalpieces * unity * totalboxes
+
+				tbody.innerHTML += `<tr><td class="fnum">${unity}</td><td>${product}</td><td class="fnum">${totalpieces}</td><td class="fnum">${totalboxes}</td><td class="fnum">${totalunity}</tr>`
+			}
+		</script>
+	</body>
+</html>

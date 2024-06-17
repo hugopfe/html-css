@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão com Efeito</title>
+    <style>
+        :root {
+            --color1: rgb(255, 255, 149);
+            --color2: rgb(255, 255, 43);
+            --color3: rgb(44, 43, 43);
+        }
+
+        * {
+            font: bold 1.2em "Arial Black";
+        }
+
+        body {
+            background-color: var(--color3);
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            border: 5px solid var(--color1);
+            min-width: 200px;
+            height: 70px;
+            background-color: var(--color3);
+            color: var(--color1);
+            padding: 5px;
+            position: relative;
+        }
+
+        button::before, button::after {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 20px;
+            background-color: var(--color3);
+            height: 5px;
+            width: 10px;
+            transform: skew(45deg);
+            transition: 500ms;
+        }
+
+        button::after {
+            top: 60px;
+            left: 160px;
+        }
+
+        button:hover {
+            border-color: var(--color2);    
+            color: var(--color2);
+            cursor: pointer;
+        }
+
+        button:hover::before {
+            left: 160px;
+        }
+
+        button:hover::after {
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button>HAGIOS</button>
+</body>
+</html>
