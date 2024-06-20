@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coração Batendo</title>
+    <style>
+        :root {
+            --color1: crimson;
+            --color2: rgb(44, 43, 43);
+        }
+
+        * {
+            font: bold 1.2em "Arial Black";
+            margin: 0;
+        }
+
+        body {
+            background-color: var(--color2);
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes beat {
+            0% {
+                scale: 1;
+            }
+
+            100% {
+                scale: 1.4;
+            }
+        }
+        
+        div {
+            background-color: var(--color1);
+            width: 100px;
+            height: 100px;
+            transform: rotate(45deg);
+            border-bottom-right-radius: 5%;
+            position: relative;
+            animation: beat 1.4s linear(0 0%, 1 20%, 0.5 30%, 1 45%, 0 60%, 0 100%) infinite;
+        }
+
+        div::before, div::after {
+            content: "";
+            background-color: var(--color1);
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        
+        div::before {
+            top: 0%;
+            left: -50%;
+        }
+        
+        div::after {
+            top: -50%;
+            left: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div id="heart"></div>
+</body>
+</html>
