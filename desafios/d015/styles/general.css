@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background: rgb(255, 225, 141) url(../images/fundo-madeira.jpg) center;
+    background-size: cover;
+}

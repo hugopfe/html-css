@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+ul {
+    list-style-type: none;
+    
+    position: absolute;
+    top: 2%;
+    left: 90%;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    transition: 500ms;
+}
+
+li:hover {
+    scale: 1.1;
+    box-shadow: 2px 2px 8px #0006;
+}
+
+li:hover::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#fff1 50%, #fff3 80%);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 500ms;
+}
+
+li#home-button {
+    background-image: url("../images/logo-home.jpg");
+}
+
+li#facebook-button {
+    background-image: url("../images/logo-facebook.jpg");
+}
+
+li#instagram-button {
+    background-image: url("../images/logo-instagram.jpg");
+}
+
+li#twitter-button {
+    background-image: url("../images/logo-twitter.jpg");
+}
+
+li#github-button {
+    background-image: url("../images/logo-github.jpg");
+}
+
+li#youtube-button {
+    background-image: url("../images/logo-youtube.jpg");
+}
