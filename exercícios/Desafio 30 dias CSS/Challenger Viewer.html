@@ -11,6 +11,7 @@
 
         body {
             height: 100vh;
+            width: 100vw;
             margin: 0;
         }
 
@@ -20,7 +21,7 @@
 
         #container {
             width: 97vw;
-            height: 70vw;
+            height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -29,13 +30,39 @@
         #container iframe {
             display: block;
             width: 80%;
-            height: 80%;
+            height: 90%;
+        }
+        
+        ol {
+            columns: 2;
+            list-style-position: inside;
+            width: 90%;
+            /* height: 100px; */
+            margin: auto;
+            padding: 20px;
+            background-color: cornsilk;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px #0003;
+        }
+
+        ol a {
+            color: rgb(141, 92, 27);
+            text-decoration: none;
+        }
+
+        ol a:visited {
+            color: rgb(103 73 34);
+        }
+
+        ol li {
+            font-size: 1.2em;
+            line-height: 1.3em;
         }
         
     </style>
 </head>
 <body>
-    <h1>Selecione qual desafio você quer ver</h1>
+    <div id="container"><iframe srcdoc="<h1 style='font-family: sans-serif; text-align: center;'>Selecione qual desafio você quer ver</h1>" frameborder="0" name="show-file" sandbox="sandbox" referrerpolicy="no-referrer"></iframe></div>
     <ol>
         <a href="Day 1 - Social Media.html" target="show-file">
             <li>Mídias Sociais</li>
@@ -74,6 +101,5 @@
             <li>Mudando cor do texto ao passar o mouse</li>
         </a>
     </ol>
-    <div id="container"><iframe src="" frameborder="0" name="show-file" sandbox="sandbox" referrerpolicy="no-referrer"></iframe></div>
 </body>
 </html>
