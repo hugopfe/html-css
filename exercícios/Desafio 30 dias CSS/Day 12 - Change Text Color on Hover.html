@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mudar cor ao passar o mouse</title>
+        <style>
+            body {
+                background-color: rgb(21, 23, 136);
+                font-family: "Arial Black", sans-serif;
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 6em;
+                color: rgb(9, 10, 83);
+                text-transform: uppercase;
+                position: relative;
+            }
+            
+            h1::before {
+                content: "Rei dos reis";
+                text-decoration: underline;
+                color: white;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0%;
+                text-wrap: nowrap;
+                overflow: clip;
+                transition-property: width;
+                transition-duration: 500ms;
+            }
+
+            h1:hover::before {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Rei dos reis</h1>
+    </body>
+</html>
