@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading com efeito</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            position: relative;
+            width: 800px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        div span {
+            position: absolute;
+            font-size: 5em;
+            animation: waves 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes waves {
+            0% {
+                /* transform: translate(0); */
+                color: blueviolet;
+            }
+            50% {
+                color: rgb(34, 21, 146);
+            }
+            100% {
+                transform: translate(90px);
+                color: white;
+            }
+        }
+
+        div span:nth-child(1) {
+            left: 100px;
+            animation-delay: -1200ms;
+        }
+
+        div span:nth-child(2) {
+            left: 170px;
+            animation-delay: -1000ms;
+        }
+
+        div span:nth-child(3) {
+            left: 250px;
+            animation-delay: -800ms;
+        }
+
+        div span:nth-child(4) {
+            left: 320px;
+            animation-delay: -600ms;
+        }
+
+        div span:nth-child(5) {
+            left: 400px;
+            animation-delay: -400ms;
+        }
+
+        div span:nth-child(6) {
+            left: 455px;
+            animation-delay: -200ms;
+        }
+
+        div span:nth-child(7) {
+            left: 530px;
+            animation-delay: 0ms;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>L</span>
+        <span>O</span>
+        <span>A</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+    </div>
+</body>
+</html>
