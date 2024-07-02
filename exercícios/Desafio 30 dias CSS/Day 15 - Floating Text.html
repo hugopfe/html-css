@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Flutuante</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+        
+        body {
+            background-color: darkorange;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Lato;
+        }
+
+        h1 {
+            font-size: 7em;
+            color: white;
+            text-shadow: 0px 1px 0px #efefef,
+            0px 2px 0px #efefef,
+            0px 3px 0px #efefef,
+            0px 4px 0px #efefef,
+            0px 30px 10px #0003;
+            animation: float 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes float {
+            from {
+                transform: rotate(-10deg);
+            }
+            
+            to {
+                transform: rotate(10deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>EMAUNEL</h1>
+</body>
+</html>
