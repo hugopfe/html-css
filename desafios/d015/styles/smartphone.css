@@ -2,7 +2,6 @@
 
 #smartphone {
     background: url(../images/frame-iphone.png) center no-repeat;
-
     width: 311px;
     height: 627px;
     position: absolute;
@@ -15,7 +14,7 @@
     position: absolute;
     top: 79px;
     left: 21px;
-    width: 270px;
-    height: 473px;
+    width: 271px;
+    height: 474px;
 }
 
