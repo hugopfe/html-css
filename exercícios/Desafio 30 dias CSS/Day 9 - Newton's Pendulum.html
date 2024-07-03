@@ -26,7 +26,7 @@
 
         #pendulum {
             width: 400px;
-            height: 500px;
+            height: 300px;
             position: relative;
         }
 
@@ -37,17 +37,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100%;
+            height: 130%;
             padding: 0;
         }
         
         li#sphere::before {
             content: "";
             background-color: white;
-            height: 220px;
+            height: 170px;
             width: 5px;
             position: absolute;
-            transform: translate(27.5px, -220px);        
+            transform: translate(27.5px, -170px);        
         }
         
         li#sphere {
@@ -58,7 +58,7 @@
         }
         
         li#sphere:first-child, li#sphere:last-child {
-            transform-origin: 30px -220px;
+            transform-origin: 30px -170px;
             animation: move 1.5s ease-in infinite;
         }
 
