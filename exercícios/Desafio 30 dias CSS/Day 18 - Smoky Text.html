@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto esfumaçado</title>
+    <style>
+        body {
+            background-color: brown;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            font: normal 5em Verdana;
+            color: white;
+            display: inline-block;
+            position: relative;
+            width: 400px;
+            height: 100px;
+        }
+
+        div span {
+            position: absolute;
+            transition: transform 2s, filter 2s, opacity 2s;
+        }
+
+        div span:nth-child(1) {
+            transition-delay: 0ms;
+            left: 0;
+        }
+
+        div span:nth-child(2) {
+            transition-delay: 200ms;
+            left: 50px;
+        }
+
+        div span:nth-child(3) {
+            transition-delay: 400ms;
+            left: 95px;
+        }
+
+        div span:nth-child(4) {
+            left: 150px;
+        }
+
+        div span:nth-child(5) {
+            transition-delay: 600ms;
+            left: 200px;
+        }
+
+        div span:nth-child(6) {
+            transition-delay: 800ms;
+            left: 255px;
+        }
+
+        div span:nth-child(7) {
+            transition-delay: 1000ms;
+            left: 300px;
+        }
+
+        div span:nth-child(8) {
+            transition-delay: 1200ms;
+            left: 370px;
+        }
+
+        div:hover span {
+            filter: blur(30px);
+            transform: rotate(40deg) translate(0px, -150px);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>E</span>
+        <span>L</span>
+        <span>E</span>
+        <span></span>
+        <span>V</span>
+        <span>E</span>
+        <span>M</span>
+        <span>!</span>
+    </div>
+</body>
+</html>
