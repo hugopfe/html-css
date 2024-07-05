@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partículas</title>
+    <style>
+        :root {
+            --color1: red;
+            --color1-shadow: rgba(255, 0, 0, 0.478);
+            --color2: yellow;
+            --color2-shadow: rgba(255, 255, 0, 0.473);
+            --color3: blue;
+            --color3-shadow: rgba(0, 0, 255, 0.479);
+        }
+        
+        body {
+            margin: 0;
+            height: 100%;
+            background-color: #222;
+            overflow: hidden;
+        }
+
+        @keyframes zigzag-move {
+            5% {
+                transform: translate(5000%, 2000%);
+            }
+            10% {
+                transform: translate(4500%, 2100%);
+            }
+            15% {
+                transform: translate(3500%, 3000%);
+            }
+            20% {
+                transform: translate(4000%, 2500%);
+            }
+            25% {
+                transform: translate(4500%, 2000%);
+            }
+            50% {
+                transform: translate(4000%, 3000%);
+            }
+            100% {
+                transform: translate(3000%, 4000%);
+            }
+        }
+        
+        span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            filter: blur(5px);
+            animation: 5s ease-in-out infinite;
+        }
+
+        span:nth-child(1) {
+            background-color: var(--color1);
+            box-shadow: 0 0 15px 10px var(--color1-shadow);
+            top: 50px;
+            left: 50px;
+            animation-name: zigzag-move;
+        }
+
+        span:nth-child(2) {
+            background-color: var(--color2);
+            box-shadow: 0 0 15px 10px var(--color2-shadow);
+            top: -20%;
+            left: 110%;
+            animation-name: zigzag-move;
+            animation-delay: -3s;
+        }
+
+        span:nth-child(3) {
+            background-color: var(--color3);
+            box-shadow: 0 0 15px 10px var(--color3-shadow);
+            top: 50px;
+            left: 750px;
+        }
+
+        span:nth-child(4) {
+            background-color: var(--color1);
+            box-shadow: 0 0 15px 10px var(--color1-shadow);
+            top: 660px;
+            left: 550px;
+        }
+
+        span:nth-child(5) {
+            background-color: var(--color2);
+            box-shadow: 0 0 15px 10px var(--color2-shadow);
+            top: 300px;
+            left: 600px;
+        }
+
+        span:nth-child(6) {
+            background-color: var(--color3);
+            box-shadow: 0 0 15px 10px var(--color3-shadow);
+            top: 850px;
+            left: 450px;
+        }
+
+        span:nth-child(7) {
+            background-color: var(--color1);
+            box-shadow: 0 0 15px 10px var(--color1-shadow);
+            top: 80%;
+            left: 10%;
+        }
+
+        span:nth-child(8) {
+            background-color: var(--color2);
+            box-shadow: 0 0 15px 10px var(--color2-shadow);
+            top: 5%;
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</body>
+</html>
