@@ -5,23 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partículas</title>
     <style>
-        body {
+        * {
             margin: 0;
-            height: 100%;
+            padding: 0;
+        }
+        
+        body {
             background-color: #222;
+            min-height: 100vh;
+            width: 100vw;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.particles {
+            position: relative;
+            min-width: 750px;
+            height: 750px;
+            transform-origin: left;
+            margin: -150px;
+            animation: changeColor 5s linear infinite;
+        }
+
+        div.particles:nth-child(even) {
+            transform-origin: right;
+        }
+
+        @keyframes changeColor {
+            to {
+                filter: hue-rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        div.particles span {
+            position: absolute;
+            top: calc(80px*var(--i));
+            left: calc(80px*var(--i));
+            right: calc(80px*var(--i));
+            bottom: calc(80px*var(--i));
+            animation: move 20s infinite;
+            animation-direction: alternate;
+        }
+        
+        .particles span::before {
+            content: '';
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: -5px;
+            width: 15px;
+            height: 15px;
+        }
+
+        @keyframes move {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes move-reverse {
+            from {
+                transform: rotate(360deg);
+            }
+            to {
+                transform: rotate(0deg);
+            }
+        }
+
+        .particles span:nth-child(3n+1)::before {
+            background-color: yellow;
+            box-shadow: 0px 0px 2px yellow,
+            0 0 5px yellow, 0 0 10px yellow, 0 0 20px yellow;
+        }
+        
+        div.particles span:nth-child(3n+2)::before {
+            background-color: rgb(95, 252, 95);
+            box-shadow: 0px 0px 2px rgb(95, 252, 95),
+            0 0 5px rgb(95, 252, 95), 0 0 10px rgb(95, 252, 95), 0 0 20px rgb(95, 252, 95);
+        }
+        
+        div.particles span:nth-child(3n+3)::before {
+            background-color: rgb(239, 95, 252);
+            box-shadow: 0px 0px 2px rgb(239, 95, 252),
+            0 0 5px rgb(239, 95, 252), 0 0 10px rgb(239, 95, 252), 0 0 20px rgb(239, 95, 252);
+        }
+        
+        div.particles span:nth-child(3n+2)::before {
+            background-color: rgb(95, 252, 95);
+            box-shadow: 0px 0px 2px rgb(95, 252, 95),
+            0 0 5px rgb(95, 252, 95), 0 0 10px rgb(95, 252, 95), 0 0 20px rgb(95, 252, 95);
+        }
+        
+        div.particles span:nth-child(3n+1) {
+            animation-duration: 10s;
+        }
+        
+        div.particles span:nth-child(3n+2) {
+            animation-duration: 3s;
+            animation-name: move-reverse;
+        }
+
+        div.particles span:nth-child(3n+3) {
+            animation-duration: 3s;
         }
 
     </style>
 </head>
 <body>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+    <div class="particles">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+    </div>
+    <div class="particles">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+    </div>
+    <div class="particles">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+    </div>
+    <div class="particles">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+    </div>
 </body>
 </html>
