@@ -1,3 +1,8 @@
 @charset "UTF-8";
 
 /* Estilos para dispositivo em paisagem */
+
+body {
+    background-image: url(../images/cev-landscape.jpg);
+    
+}
