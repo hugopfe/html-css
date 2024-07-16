@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão com Efeito</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #222;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            font: normal 2.5em sans-serif;
+            color: white;
+            background-color: transparent;
+            border: 3px solid white;
+            padding: 30px 50px;
+            transition: color 300ms, border 300ms;
+        }
+
+        button:hover {
+            color: #373;
+            border-color: #373;
+            cursor: pointer;
+            animation: shaking 300ms linear 1;
+        }
+
+        @keyframes shaking {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(5deg);
+            }
+
+            50% {
+                transform: rotate(-5deg);
+            }
+
+            75% {
+                transform: rotate(5deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button>El-Shadday</button>
+</body>
+</html>
