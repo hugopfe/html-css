@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Animado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #container {
+            width: 400px;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wrapper {
+            display: inline;
+            height: 100px;
+            cursor: pointer;
+            position: relative;
+            user-select: none;
+            font-size: 4em;
+        }
+
+        .wrapper input {
+            width: 0;
+            height: 0;
+            opacity: 0;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .wrapper span {
+            filter: grayscale(1);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .wrapper input:checked ~ span {
+            filter: grayscale(0);
+        }
+
+        .wrapper span#cross {
+            color: #955ced;
+        }
+
+        .wrapper span#kb {
+            color: rgb(4, 231, 4);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <label class="wrapper"><input type="checkbox"><span id="cross">&#x271D;</span></label>
+        <label class="wrapper"><input type="checkbox"><span>&#x1F4D6;</span></label>
+        <label class="wrapper"><input type="checkbox"><span id="kb">&#x1F5AE;</span></label>
+        <label class="wrapper"><input type="checkbox"><span>&#x1F3B8;</span></label>
+    </div>
+</body>
+</html>
