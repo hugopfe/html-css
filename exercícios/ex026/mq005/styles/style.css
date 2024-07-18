@@ -62,9 +62,12 @@ main {
     background-color: white;
     margin: auto;
     margin-top: 10px;
-    padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 2px 8px #0004;
+}
+
+main > article {
+    padding: 20px;
 }
 
 main > article > h1 {
