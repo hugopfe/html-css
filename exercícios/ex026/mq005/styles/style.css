@@ -92,3 +92,20 @@ main > article > ul {
 main > article > ul > li {
     line-height: 1.5em;
 }
+
+main > article > figure {
+    margin: 20px auto;
+    display: block;
+}
+
+main > article img {
+    max-width: 80%;
+    margin: 10px auto;
+    display: block;
+}
+
+main > article figcaption {
+    text-align: center;
+    font-size: 0.9em;
+    font-style: italic;
+}
