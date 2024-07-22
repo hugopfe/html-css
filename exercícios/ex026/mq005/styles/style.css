@@ -103,6 +103,19 @@ main > article > p {
     text-align: justify;
 }
 
+main > article strong {
+    color: var(--color6);
+}
+
+main > article > blockquote {
+    margin: 10px 20px;
+    font-style: italic;
+    text-align: center;
+}
+
+main > article q {
+    font-style: italic;
+}
 main > article > ul {
     list-style-position: inside;
     text-indent: 3em;
