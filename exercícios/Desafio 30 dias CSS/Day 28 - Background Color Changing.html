@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cor do fundo mudando</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: change-bgcolor 10s linear infinite backwards;
+            background-color: rgb(43, 187, 223);
+
+        }
+        
+
+        @keyframes change-bgcolor {
+            0% {
+                background-color: rgb(43, 187, 223);
+            }
+
+            30% {
+                background-color: rgb(255, 115, 0);
+            }
+
+            50% {
+                background-color: rgb(165, 21, 2);
+            }
+
+            75% {
+                background-color: rgb(53, 10, 4);
+            }
+        }
+
+        div {
+            font: bold 5em sans-serif;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>Discernir os Tempos<br><sup>Mt 16.2-3</sup></div>
+</body>
+</html>
