@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Responsivo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        menu {
+            width: 100%;
+            /* padding: 5px; */
+        }
+
+        menu > span {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 1.2em !important;
+            text-align: right;
+            border-bottom: 2px solid #dddddd;
+        }
+
+        menu > span:active {
+            background-color: #dddddd;
+        }
+
+        menu > ul#menuItems {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        menu > ul > a {
+            color: black;
+            text-decoration: none;
+        }
+
+        menu > ul > a > li {
+            font-size: 0.8em;
+            padding: 10px;
+            border-bottom: 2px solid #dddddd;
+        }
+
+        menu > ul > a > li.hightlight {
+            color: green;
+            font-weight: bold;
+        }
+
+        @media screen and (min-width: 768px) {
+            menu > span {
+                display: none !important;
+            }
+
+            menu > #menuItems {
+                display: block !important;
+                border-bottom: 2px solid #dddddd;
+                text-align: right !important;
+            }
+
+            menu > #menuItems > a {
+                display: inline-block;
+            }
+
+            menu > #menuItems > a:hover {
+                background-color: #dddddd;
+            }
+
+            menu > #menuItems > a > li {
+                font-size: 0.8em;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <menu class="material-symbols-outlined">
+        <span class="material-symbols-outlined" onclick="showMenu()">menu</span>
+        <ul id="menuItems" style="display: none;">
+            <a href="#">
+                <li>Início</li>
+            </a>
+            <a href="#">
+                <li>Serviços</li>
+            </a>
+            <a href="#">
+                <li>Sobre</li>
+            </a>
+            <a href="#">
+                <li class="hightlight">Teste grátis</li>
+            </a>
+        </ul>
+    </menu>
+    <script>
+        function showMenu() {
+            if (menuItems.style.display == 'none') {
+                menuItems.style.display = 'block'
+            } else {
+                menuItems.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>
