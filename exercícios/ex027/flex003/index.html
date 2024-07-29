@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        .container {
+            background-color: salmon;
+            display: flex;
+            flex-flow: column wrap;
+            height: 200px;
+        }
+
+        .item {
+            background-color: azure;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            flex: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Block A</div>
+        <div class="item">Block B</div>
+        <div class="item">Block C</div>
+        <div class="item">Block D</div>
+        <div class="item">Block E</div>
+        <div class="item">Block F</div>
+        <div class="item">Block G</div>
+    </div>
+</body>
+</html>
