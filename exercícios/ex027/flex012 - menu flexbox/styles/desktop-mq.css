@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+header {
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+nav a {
+    border: none;
+}
+
+nav a:hover {
+    background-color: rgb(68, 68, 68);
+}

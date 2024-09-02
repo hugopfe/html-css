@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+header {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+header #title {
+    align-self: center;
+}
+
+nav {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+}
+
+nav a {
+    border-right: 1px solid rgb(136, 136, 136);
+}
+
+main section {
+    width: 700px;
+    margin: 20px auto;
+}
