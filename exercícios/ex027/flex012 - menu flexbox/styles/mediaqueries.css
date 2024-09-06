@@ -2,12 +2,13 @@
 
 header {
     display: flex;
-    flex-flow: column;
-    align-items: flex-start;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header #title {
-    align-self: center;
+    flex: 0 0 450px
 }
 
 nav {
@@ -17,6 +18,12 @@ nav {
 
 nav a {
     border-right: 1px solid rgb(136, 136, 136);
+    border: none;
+    transition: background-color 400ms;
+}
+
+nav a:hover {
+    background-color: rgb(68, 68, 68);
 }
 
 main section {
