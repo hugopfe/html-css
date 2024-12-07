@@ -17,7 +17,6 @@
 body {
     background-color: #aaa;
 
-    width: 100vw;
     height: 100vh;
 
     font-family: var(--paragraph-font1);
